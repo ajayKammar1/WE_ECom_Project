@@ -216,7 +216,7 @@ const App = () => {
   return (
     <>
       <Container>
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-DhayAmIlm3IRHJkDwwhBIyeleBD6B3MD_g&s" alt="Logo" />
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtra-JQAy-z_pXV-T4FttKSVm0PxbhLe1XxQ&s" alt="Logo" />
         <SubContainer>
           <LeftDIv>
 
