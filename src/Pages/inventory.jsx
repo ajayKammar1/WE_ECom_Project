@@ -234,6 +234,7 @@ const Inventory = () => {
                 </div>
 
             </div>
+            
         </>
     );
 };

@@ -1,5 +1,5 @@
 import React from "react";
-import { MenuOutlined, FullscreenOutlined, DribbbleOutlined, UserOutlined, InfoCircleOutlined, DashboardOutlined, SettingOutlined, DownCircleFilled, DownCircleOutlined, DownOutlined, CaretDownFilled, InteractionOutlined, BorderOutlined, LeftOutlined, RightOutlined, PlusOutlined, ShareAltOutlined, FieldTimeOutlined, CopyOutlined, NotificationOutlined, NotificationTwoTone, BehanceOutlined, BellOutlined, LeftCircleFilled, PlayCircleOutlined, PlusCircleOutlined, UserAddOutlined, UsergroupAddOutlined, ProductOutlined, PullRequestOutlined, PlusSquareOutlined, StockOutlined, MinusCircleOutlined, TruckOutlined } from "@ant-design/icons";
+import { MenuOutlined, UserOutlined, InfoCircleOutlined, DashboardOutlined, SettingOutlined, DownOutlined, LeftOutlined, RightOutlined, PlusOutlined, ShareAltOutlined, FieldTimeOutlined, CopyOutlined, BellOutlined, LeftCircleFilled, PlusCircleOutlined, UsergroupAddOutlined, ProductOutlined, PlusSquareOutlined, StockOutlined, MinusCircleOutlined, TruckOutlined } from "@ant-design/icons";
 
 const Addproduct = () => {
     return (
