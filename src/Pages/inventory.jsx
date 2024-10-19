@@ -5,15 +5,16 @@ const Inventory = () => {
 
     const data = [
         {
-            "date": "2024-10-01",
-            "reference": "INV-001",
-            "biller": "John Doe",
-            "warehouse": "Main Warehouse",
-            "saleStatus": "Completed",
-            "paymentStatus": "Paid",
-            "grandTotal": 1000,
-            "paid": 1000,
-            "due": 0
+            "date": "Date",
+            "reference": "Reference",
+            "biller": "Biller",
+            "warehouse": "Warehouse",
+            "saleStatus": "Sale Status",
+            "paymentStatus": "Payment",
+            "grandTotal": "Grand",
+            "paid": "Paid",
+            "due": "Due",
+            "Action":"Action"
         },
         {
             "date": "2024-10-02",
@@ -138,48 +139,69 @@ const Inventory = () => {
         }
     ]
 
+    const StateColor = (state) => {
+        switch(state) {
+            case "Completed": 
+                return "bg-green-400";
+            case "Canceled": 
+                return "bg-red-400";
+            case "Pending": 
+                return "bg-orange-400";
+            case "Unpaid": 
+                return "bg-purple-400";
+            case "Paid": 
+                return "bg-green-400";
+            default: 
+                return "bg-blue-400";
+        }
+    };
 
     return (
         <>
-            <div className=" bg-white-400 h-full w-200 m-4 rounded-3xl border shadow-lg">
-                <div className="bg-white-300 p-1">
-                    <icon className="ml-4 mr-96"><MenuOutlined /></icon>
-                    <logo className="ml-80 mr-40 text-2xl font-bold italic text-blue-500">$ale<i className="text-purple-900">Pro</i></logo>
-
-                    <icon className="ml-96 mr-2 text-purple-800"><FullscreenOutlined /></icon>
-                    <icon className="mr-2 text-purple-800"><DribbbleOutlined /></icon>
-                    <icon className="mr-2 text-purple-800"><UserOutlined /></icon>
-                    <profile className="content-end">Shakalaka <CaretDownOutlined /></profile>
+            <div className=" bg-white-400 h-full w-100% m-4 rounded-2xl border shadow-lg">
+                <div className="bg-white-300 p-2 flex flex-row justify-between ">
+                    <div>
+                        <icon className=""><MenuOutlined /></icon>
+                    </div>
+                    <div>
+                        <logo className=" text-xl font-bold italic text-blue-500">$ale<i className="text-purple-900">Pro</i></logo>
+                    </div>
+                    <div>
+                        <icon className=" mr-2 text-purple-800"><FullscreenOutlined /></icon>
+                        <icon className="mr-2 text-purple-800"><DribbbleOutlined /></icon>
+                        <icon className="mr-2 text-purple-800"><UserOutlined /></icon>
+                        <profile className="content-end">Shakalaka <CaretDownOutlined /></profile>
+                    </div>
+                    
                 </div>
 
-                <div className="flex flex-wrap bg-slate-100 rounded-b-3xl">
+                <div className="flex flex-wrap bg-slate-100 rounded-b-2xl">
 
-                    <div className="flex flex-col w-56 mt-3">
+                    <div className="flex flex-col w-[15%]  mt-3 hidden md:flex">
                         <text className="m-1 ml-4"><DashboardOutlined /> Dashboard</text>
                         <text className="m-1 ml-4"><SettingOutlined /> Setting</text>
 
                     </div>
 
-                    <div className="w-10/12">
+                    <div className="w-[85%]">
                         <div className="flex flex-row justify-between">
                             <text className=" m-3 text-purple-700 font-bold">WELCOME SHAKALAKA</text>
                             <text className=" m-3  text-purple-700 font-bold">REWARD POINTS: 3</text>
                         </div>
 
-                        <div className="bg-white">
+                        <div className="bg-white pb-[1px]">
                             <div className="p-1.5 shadow">
-                                <a className="mr-10 ml-4 active:blue" href="http://">Sale</a>
-                                <a className="mr-10 " href="http://">Payment</a>
-                                <a className="mr-10 " href="http://">Questions</a>
-                                <a className="mr-10 " href="http://">Return</a>
+                                <a className="mr-[2%] ml-4 active:blue" href="http://">Sale</a>
+                                <a className="mr-[2%]" href="http://">Payment</a>
+                                <a className="mr-[2%] " href="http://">Questions</a>
+                                <a className="mr-[2%] " href="http://">Return</a>
 
                             </div>
 
-                            <div className="flex flex-row justify-between m-5">
+                            <div className="flex flex-row justify-between m-[1%]">
                                 <button>Show entries</button>
                                 <input placeholder="search" className="border rounded-md pl-2 text-black" />
                                 <div className="">
-                                    {/* <button className="m-0.5 bg-red-500 text-white p-1 rounded-l-md">PDF</button> */}
                                     <a href="path/to/your/file.pdf" download className="m-0.5 bg-red-500 text-white p-1 rounded-l-md">
                                         <span>PDF</span>
                                     </a>
@@ -191,41 +213,60 @@ const Inventory = () => {
 
 
 
-                            <div className="w-auto rounded-lg m-4  bg-slate-50">
+                            <div className="w-auto rounded-lg m-4  bg-slate-100">
 
-                                <table className="w-full ">
-                                    <tr className="flex flex-row justify-around p-5 shadow-md w-[1250px]">
-                                        <th><BorderOutlined /></th>
-                                        <th>Date</th>
-                                        <th>Reference</th>
-                                        <th>Biller</th>
-                                        <th>Warehouse</th>
-                                        <th>Sale Status</th>
-                                        <th className="w-24">Payment Stutus</th>
-                                        <th className="w-20">Grand Total</th>
-                                        <th>Paid</th>
-                                        <th>Due</th>
-                                        <th>Action</th>
-                                    </tr>
+                                <table className="w-[100%] table-auto border-collapse">
+                                    <thead className="shadow-sm">
+                                        <tr className="">
+                                            <th className="p-2 "><input type="checkbox" name="" id="" /></th>
+                                            <th className="p-2 ">Date</th>
+                                            <th className="p-2 ">Reference</th>
+                                            <th className="p-2 ">Biller</th>
+                                            <th className="p-2 ">Warehouse</th>
+                                            <th className="p-2 ">Sale Status</th>
+                                            <th className="p-2 ">Payment Stutus</th>
+                                            <th className="p-2 ">Grand Total</th>
+                                            <th className="p-2 ">Paid</th>
+                                            <th className="p-2 ">Due</th>
+                                            <th className="p-2 ">Action</th>
+                                        </tr>
 
+                                    </thead>
+                                    
+                                    <tbody>
+                                        
                                     {data.map(item => (
-                                        <tr key={item.id} className="flex flex-row text-center content-center p-3 shadow-sm">
-                                            <td className="w-5 ml-8 mr-3"><BorderOutlined /></td>
-                                            <td className="w-[90px]  ml-4 mr-2 ">{item.date}</td>
-                                            <td className="w-24 ml-3 mr-2 ">{item.reference}</td>
-                                            <td className="w-24 mr-2 ">{item.biller}</td>
-                                            <td className="w-28 ml-2 mr-2 ">{item.warehouse}</td>
-                                            <td className="bg-green-400 w-24 mr-2 text-white rounded-md p-0.3 ml-5 h-7  px-1">{item.saleStatus}</td>
-                                            <td className="bg-green-400 w-16 text-white rounded-md p-0.3 ml-14 mr-16 h-7 px-1 ">{item.paymentStatus}</td>
-                                            <td className="w-16  mr-12 ">{item.grandTotal}</td>
-                                            <td className="w-16  ml-1 mr-4 ">{item.paid}</td>
-                                            <td className="w-16 ml-2 mr-14 ">{item.due}</td>
-                                            <td className="w-15 "><InteractionOutlined /></td>
+                                        <tr key={item.id} className="text-center">
+                                            <td className="p-2 "><input type="checkbox" name="" id="" /></td>
+                                            <td className="p-2 ">{item.date}</td>
+                                            <td className="p-2 ">{item.reference}</td>
+                                            <td className="p-2 ">{item.biller}</td>
+                                            <td className="p-2 ">{item.warehouse}</td>
+
+                                            <td className="p-2"> 
+                                            <button className={`${StateColor(item.saleStatus)} w-[100%] rounded-lg text-white `}>
+                                                {item.saleStatus}
+                                            </button>
+                                                
+                                            </td>
+
+                                            <td className="p-2">
+                                                <button className={`${StateColor(item.paymentStatus)} w-[60%] rounded-lg text-white  `}>
+                                                    {item.paymentStatus}
+                                                </button>
+                                                
+                                            </td>
+
+                                            <td className="p-2 ">{item.grandTotal}</td>
+                                            <td className="p-2 ">{item.paid}</td>
+                                            <td className="p-2 ">{item.due}</td>
+                                            <td className="p-2 ">{item.Action}</td>
                                         </tr>
                                     ))}
 
-                                </table>
+                                    </tbody>
 
+                                </table>
 
                             </div>
 

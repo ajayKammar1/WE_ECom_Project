@@ -16,6 +16,10 @@ const LeftSection = styled.div`
   background: linear-gradient(135deg, #f5a623, #f76b1c);
   color: white;
   padding: 50px;
+
+  @media (max-width: 600px) {
+    display: none;
+  }
 `;
 
 const RightSection = styled.div`
@@ -26,17 +30,21 @@ const RightSection = styled.div`
   width: 50%;
   background-color: #fff;
   padding: 50px;
+  @media (max-width: 600px) {
+    width:100%;
+    padding: 20px;
+  }
 `;
 
 const WelcomeText = styled.h1`
-  font-size: 48px;
+  font-size: 2.5rem;
   margin-bottom: 20px;
   text-align: center;
   letter-spacing: 2px;
 `;
 
 const Subtitle = styled.p`
-  font-size: 20px;
+  font-size: 1.5rem;
   text-align: center;
 `;
 
@@ -44,40 +52,42 @@ const Form = styled.form`
   display: flex;
   flex-direction: column;
   background: white;
-  padding: 40px;
+  padding: 20px;
   border-radius: 10px;
   box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.1);
-  width: 350px;
+  width: 70%;
+  height: 100%;
 `;
 
 const Input = styled.input`
-  margin-bottom: 20px;
-  padding: 12px;
+  margin-bottom: 10px;
+  padding: 7px;
   border: 1px solid #ddd;
   border-radius: 8px;
-  font-size: 16px;
+  font-size: 0.8rem;
   transition: all 0.3s ease;
 
-//   &:focus {
-//     border-color: #f76b1c;
-//     outline: none;
-//   }
+  &:focus {
+    border-color: #f76b1c;
+    outline: none;
+  }
 `;
 
 const Label = styled.label`
-  margin-bottom: 8px;
-  font-size: 14px;
+  margin-bottom: 7px;
+  font-size: 0.8rem;
   color: #333;
 `;
 
 const Button = styled.button`
-  padding: 12px;
+  padding: 0.6rem;
   background: linear-gradient(135deg, #f76b1c, #f5a623);
   color: white;
-  font-size: 18px;
+  font-size: 1rem;
   border: none;
   border-radius: 8px;
   cursor: pointer;
+  margin-top: 10px;
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
 
   &:hover {
@@ -88,7 +98,7 @@ const Button = styled.button`
 
 const Title = styled.h2`
   margin-bottom: 30px;
-  font-size: 24px;
+  font-size: 1.5rem;
   color: #333;
   text-align: center;
 `;

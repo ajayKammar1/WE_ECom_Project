@@ -1,78 +1,78 @@
 import React from "react";
 import styled from 'styled-components';
-import { SettingOutlined, DollarOutlined, CaretDownOutlined, ArrowRightOutlined, DribbbleOutlined, UserOutlined } from "@ant-design/icons";
-
+import { SettingOutlined, DollarOutlined, ArrowRightOutlined, DribbbleOutlined, UserOutlined } from "@ant-design/icons";
 
 const Container = styled.div`
-  // display: flex;
-  height: 700px;
+  // height: 100vh;
   background-color: purple;
-  padding: 30px;
-  padding-top: 70px;
-  padding-bottom: 50px;
-  border-radius: 10px;
-  // margin: 50px;
-
-  #text1{
-    margin-left: 15px;
-    color: black;
+  padding: 20px;
+  padding-top: 50px;
+  padding-bottom: 30px;
+  // border-radius: 5px;
+  @media (max-width: 1024px) {
+    padding: 10px;
+  }
+  @media (max-width: 768px) {
+    padding: 20px;
+    height: auto;
   }
 
-  input{
-    border: white;
-    width: 88%;
-    height: 30px;
-    padding-left: 10px;
+  #text1{
+    margin-left: 10px;
     color: black;
   }
 
   #Asia{
-    margin-right: 20px;
-    width: 230px;
-    padding-right: 7px;
-
+    margin-right: 10px;
+    width: 25%;
+    padding-right: 5px;
+    @media (max-width: 1024px) {
+      width: 45%;
+    }
+    @media (max-width: 768px) {
+      width: 100%;
+    }
   }
 
-  #Education{
-    // margin-right: 20px;
-    width: 320px;
-  }
-
-  #Number{
-    // margin-right: 20px;
-    width: 320px;
-  }
-  
-  #USD{
-    width: 100px;
-    padding-right: 7px;
+  #Education, #Number {
+    width: 100%;
+    // border: black;
+    // width: 88%;
+    // height: 30px;
+    // padding-left: 10px;
+    color: black;
   }
 
   #continue{
     background-color: indigo;
     color: white;
-    padding: 10px 20px 10px 20px;
-    margin-left: 85%;
-    margin-top: -5px;
+    padding: 10px 20px;
+    margin-left: 75%;
+    @media (max-width: 1024px) {
+      margin-left: 60%;
+    }
+    @media (max-width: 768px) {
+      margin-left: 0;
+      width: 100%;
+    }
   }
 
-  #titlenumfilled{
+  #titlenumfilled, #titlenum {
     margin: 0px 5px 0px 0px;
-    color:white;
-    background-color: midnightblue;
-    border-radius: 150px;
+    border-radius: 50%;
     padding: 5px;
     width: 30px;
   }
 
-  #titlenum{
-    margin: 0px 5px 0px 0px;
-    color:gray;
+  #titlenumfilled {
+    color: white;
+    background-color: midnightblue;
+  }
+
+  #titlenum {
+    color: gray;
     border: 1px solid gray;
     background-color: white;
-    border-radius: 150px;
-    padding: 5px;
-    width: 30px;
   }
 
   #lightbutton{
@@ -82,8 +82,21 @@ const Container = styled.div`
   img{
     width: 80px;
     margin: -40px 0px 0px 40px;
+    @media (max-width: 768px) {
+      width: 60px;
+      margin: 0;
+    }
   }
+
+  select{
+    font-size: 0.8rem;
+    border: 1px solid gray;
+    margin: 5px;
+    padding: 7px;
+    padding-right: 20px;
+    border-radius: 5px;
 `;
+
 
 const SubContainer = styled.div`
   display: flex;
@@ -91,126 +104,152 @@ const SubContainer = styled.div`
   height: 100%;
   width: 100%;
   border-radius:10px;
+  @media (max-width: 768px) {
+    flex-direction: column;
+    height: auto;
+  }
 `;
 
 const Details = styled.div`
   display: flex;
-  // justify-content: space-evenly;
   font-size: 0.7rem;
   padding-top: 30px;
   margin-left: 50px;
-  margin-top: -5px;
-  margin-bottom: -5px;
+  @media (max-width: 768px) {
+    flex-direction: column;
+    margin-left: 0;
+  }
 `;
+
 const Text = styled.h2`
   margin-left: 130px;
   color: gray;
+  @media (max-width: 768px) {
+    margin-left: 0;
+  }
 `;
+
 const Section = styled.div`
-  height: 490px;
-  // background-color: gray;
-  margin: 20px 20px 20px 40px;
-  width: 1000px;
+  margin: 20px;
+  margin-bottom: 0px;
+  width: 85%;
   padding: 20px;
   border-radius: 10px;
   box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 `;
 
 const Subtext = styled.h2`
   font-size: 1rem;
   margin-left: 30px;
   margin-bottom: -10px;
+  @media (max-width: 768px) {
+    margin-left: 0;
+  }
 `;
 
 const Div = styled.div`
-  // background-color:red;
   display: flex;
-  // justify-content: space-between;
-  margin: 30px 30px -10px 30px;
-  // margin-bottom: -10px;
+  margin: 30px;
+  width: 100%;
+  @media (max-width: 768px) {
+    flex-direction: column;
+    margin: 20px 0;
+  }
 `;
+
 const Div1 = styled.div`
   margin-right: 30px;
+  width: 40%;
+  @media (max-width: 768px) {
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
 `;
-const Div2 = styled.div`
 
+const Div2 = styled.div`
+  margin-right: 30px;
+  width: 35%;
+  @media (max-width: 768px) {
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
 `;
+
 const Div4 = styled.div`
-//  display: flex; 
   margin: 30px;
-  margin-bottom: -10px;
+  @media (max-width: 768px) {
+    margin: 0;
+  }
 `;
 
 const Div5 = styled.div`
   margin: 30px;
-  // background-color: red;
   width: 70%;
+  @media (max-width: 768px) {
+    width: 100%;
+    margin: 10px 0;
+  }
 `;
+
 const Div6 = styled.div`
   margin: 30px;
+  @media (max-width: 768px) {
+    margin: 10px 0;
+  }
+`;
 
-`;
-const P = styled.p`
-  color: gray
-`;
 const Button = styled.button`
-  font-size: 1rem;
+  font-size: 0.8rem;
   margin: 5px 15px 5px 5px;
   padding: 10px;
   border: 1px solid white;
   border-radius: 10px;
-  // color: Purple;
   background-color: #DAB1DA;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-`;
-
-const Icon = styled.h1`
-  font-size: 1rem;
-`;
-
-const Pre = styled.div`
-    display: flex;
-    // background-color: blue;
-    // width: 230px;
-    height: 35px;
-    border: 1px solid alicblue;
-    border-radius: 10px;
-    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
-
-`;
-
-const Div7 = styled.div`
- display: flex;
-`;
-
-const LeftDIv = styled.div`
-  background-color: white;
-  height: 100%;
-  border-radius:10px;
-`;
-
-const RightDiv = styled.div`
-  // align-content: center;
-  // text-align: center;
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 `;
 
 const Heading = styled.div`
   font-size: 2rem;
-  width: 100px;
+  // width: 100px;
   margin-top: 120px;
-  margin-left: 30px;
+  // margin-left: 10px;
   color: dimgray;
-  // background-color: blue;
+  @media (max-width: 768px) {
+    text-align: center;
+    margin-top: 20px;
+    width: 100%;
+  }
 `;
 
 const SubHeading = styled.div`
   font-size: 1rem;
   width: 250px;
   margin-top: 10px;
-  margin-left: 30px;
+  // margin-left: 10px;
   color: gray;
-  // background-color: blue;
+  @media (max-width: 768px) {
+    text-align: center;
+    width: 100%;
+  }
 `;
+
+const P = styled.p``;
+// const Pre = styled.p``;
+const LeftDIv = styled.div`
+  // background-color: yellow;
+`;
+const RightDiv = styled.div`
+  // background-color: red;
+  margin-right: 0px;
+`;
+const Div7 = styled.div``;
+
 
 const Cisco = () => {
   return (
@@ -219,7 +258,6 @@ const Cisco = () => {
         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtra-JQAy-z_pXV-T4FttKSVm0PxbhLe1XxQ&s" alt="Logo" />
         <SubContainer>
           <LeftDIv>
-
             <Details>
               <Text id="text1"><Button id="titlenumfilled">1</Button> Organization Details</Text>
               <Text><Button id="titlenum">2</Button> Solution Profile</Text>
@@ -227,42 +265,44 @@ const Cisco = () => {
               <Text><Button id="titlenum">4</Button> ROI Results</Text>
             </Details>
             <Section>
-              <Subtext> Please enter following information</Subtext>
-
+              <Subtext> Please enter the following information</Subtext>
               <Div>
                 <Div1>
                   <P>Closet match to your industry</P>
-                  <Pre id="Education">
-                    <input placeholder="Education" />
-                    <Icon><CaretDownOutlined /></Icon>
-                  </Pre>
+                        <select name="" id="Education" >
+                            <option value="">Education</option>
+                            <option value="">empty</option>
+                            <option value="">other</option>
+                        </select>
                 </Div1>
                 <Div2>
-                  <P>Total number of employees</P>
-                  <Pre id="Number">
-                    <input placeholder="10-49" />
-                    <Icon><CaretDownOutlined /></Icon>
-                  </Pre>
+                  <P>Total number of employee</P>
+                <select name="" id="Number">
+                            <option value="">Number</option>
+                            <option value="">empty</option>
+                            <option value="">other</option>
+                        </select>                 
                 </Div2>
               </Div>
 
               <Div4>
-                <P> Primary location where the solution will be used</P>
+                <P>Primary location where the solution will be used</P>
                 <Div7>
-                  <Pre id="Asia">
-                    <input placeholder="Asia" />
-                    <Icon><CaretDownOutlined /></Icon>
-                  </Pre>
-                  <Pre id="USD">
-                    <input placeholder="USD" />
-                    <Icon><CaretDownOutlined /></Icon>
-                  </Pre>
+                  <select name="" id="Asia">
+                            <option value="">Asia</option>
+                            <option value="">empty</option>
+                            <option value="">other</option>
+                        </select> 
+                  <select name="" id="USD">
+                            <option value="">USD</option>
+                            <option value="">empty</option>
+                            <option value="">other</option>
+                        </select>
                 </Div7>
-
               </Div4>
 
               <Div5>
-                <P> Select your functional area</P>
+                <P>Select your functional area</P>
                 <Button id="lightbutton">Information Technology(IT)</Button>
                 <Button><SettingOutlined /> Operations</Button>
                 <Button>HR</Button>
@@ -273,23 +313,20 @@ const Cisco = () => {
               </Div5>
 
               <Div6>
-                <P> What solution(s) would you like to include in your analysis?</P>
+                <P>What solution(s) would you like to include in your analysis?</P>
                 <Button>Communication & Collaborative</Button>
                 <Button id="lightbutton"><DribbbleOutlined /> Contact Center</Button>
               </Div6>
-
-              <Button id="continue">Continue  <ArrowRightOutlined /></Button>
             </Section>
+            <Button id="continue">Continue  <ArrowRightOutlined /></Button>
+
           </LeftDIv>
 
           <RightDiv>
-            <Heading> About Organization</Heading>
-            <SubHeading> Enter the Basic Details about the Organization to proceed further</SubHeading>
+            <Heading>About Organization</Heading>
+            <SubHeading>Enter the Basic Details about the Organization to proceed further</SubHeading>
           </RightDiv>
-
         </SubContainer>
-
-
       </Container>
     </>
   );

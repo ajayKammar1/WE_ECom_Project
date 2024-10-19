@@ -4,33 +4,40 @@ import { MenuOutlined, UserOutlined, InfoCircleOutlined, DashboardOutlined, Sett
 const Addproduct = () => {
     return (
         <>
-            <div className=" bg-white-400 h-full w-200 m-4 rounded-xl border shadow-lg">
-                <div className="bg-white-300  shadow-sm">
-                    <icon className="ml-3"><MenuOutlined /></icon>
-                    <icon className="ml-3"><LeftOutlined /></icon>
-                    <icon className="ml-3 mr-72"><RightOutlined /></icon>
-                    <logo className="ml-56 mr-40"><input className="w-96 rounded-md text-center m-1 border" placeholder=" pos.sadax.co" /></logo>
+            <div className="bg-white h-full  m-4 rounded-xl border shadow-lg">
+                <div className="flex flex-row justify-between shadow-sm p-2 ">
+                    <div className=" space-x-2">
+                        <icon className=""><MenuOutlined /></icon>
+                        <icon className=""><LeftOutlined /></icon>
+                        <icon className=""><RightOutlined /></icon> 
+                    </div>
 
-                    <icon className="ml-72 mr-2 text-purple-800"><FieldTimeOutlined /></icon>
-                    <icon className="mr-2 text-purple-800"><ShareAltOutlined /></icon>
-                    <icon className="mr-2 text-purple-800"><PlusOutlined /></icon>
-                    <profile className="content-end"> <CopyOutlined /></profile>
+                    <div className="text-center w-[50%]">
+                        <input className="text-center w-[50%]" placeholder=" pos.sadax.co" />
+                    </div>
+                    
+                    <div className="space-x-2">
+                        <icon className=" text-purple-800"><FieldTimeOutlined /></icon>
+                        <icon className=" text-purple-800"><ShareAltOutlined /></icon>
+                        <icon className=" text-purple-800"><PlusOutlined /></icon>
+                        <profile className=""> <CopyOutlined /></profile>
+                    </div>
+                    
                 </div>
-                <div className="flex flex-row justify-between w-full mt-3  p-2 m-2">
+
+                <div className="flex flex-row justify-between w-full mt-2  p-2 m-2">
                     <div>
                         <text className="m-1 ml-4 font-bold text-2xl">SADA</text>
                         <logo></logo>
-                        {/* <text className="m-1 ml-4 text-xs  bg-zinc-500 flex-col w-9"> */}
                         <text>SUPER</text>
                         <text>SHOP</text>
-                        {/* </text> */}
                         <button className="m-1 ml-4"><LeftCircleFilled /></button>
                     </div>
 
-                    <div>
+                    <div className="space-x-2">
                         <button className="border border-blue-500 rounded-md text-blue-500 w-14">POS</button>
-                        <icon> </icon>
-                        <icon> </icon>
+                        {/* <icon> </icon> */}
+                        {/* <icon> </icon> */}
                         <icon className="m-1" > <BellOutlined /></icon>
 
                         <logo>LOGO <text className="font-bold">Sadax Design</text></logo>
@@ -39,9 +46,9 @@ const Addproduct = () => {
 
                 </div>
 
-                <div className="flex flex-wrap bg-white-300 rounded-b-3xl">
+                <div className="flex flex-wrap rounded-b-3xl">
 
-                    <div className="flex flex-col w-60 mt-5 mr-4">
+                    <div className="flex flex-col w-[20%] mt-5 hidden md:flex">
                         <text className="m-1.5 ml-4"><DashboardOutlined /> Dashboard</text>
                         <text className="m-1.5 ml-4"><UsergroupAddOutlined /> User Managment</text>
                         <text className="m-1.5 ml-4"><UserOutlined /> Contacts</text>
@@ -54,16 +61,15 @@ const Addproduct = () => {
                         <text className="m-1.5 ml-4"><ProductOutlined /> Reports</text>
                         <text className="m-1.5 ml-4"><BellOutlined /> Notification Templates</text>
                         <text className="m-1.5 ml-4"><SettingOutlined /> Setting</text>
-                        {/* <select> <text>heilo</text> <option>hello</option><option>nagraj</option></select> */}
                     </div>
 
-                    <div className="w-10/12">
-                        <div className="bg-gray-100 p-10 shadow-inner">
+                    <div className="w-[80%]">
+                        <div className="bg-marron-100 p-10 shadow-inner">
                             <div className=" flex flex-row justify-between mb-6">
-                                <text className="text-2xl font-bold ">Add new product</text>
+                                <text className="size-1rem font-bold ">Add new product</text>
                                 <button className="border border-blue-800 rounded-md bg-blue-800 text-white p-2 text-sm shadow-md shadow-gray-500">Action <DownOutlined /></button>
                             </div>
-                            <div className="flex flex-row shadow-sm mb-5">
+                            <div className="flex flex-row border-b-slate-100 border-b-2 mb-5">
                                 <div className="flex flex-col mr-6 ">
                                     <text>Product Image</text>
                                     <input className="ml-4 m-2 shadow-md rounded-md p-10 w-32 h-32 bg-white" type="image" src="image.jpge" alt="image" />
@@ -75,15 +81,15 @@ const Addproduct = () => {
 
                                 <div className="flex flex-col mb-5">
                                     <div className="flex flex-row ">
-                                        <div className="flex flex-col  p-2 w-80 mr-2 mb-3">
+                                        <div className="flex flex-col  p-2 w-[35%] mr-2 mb-3">
                                             <text className="mb-1 font-bold">Product Name *</text>
                                             <input className="pl-3 rounded-md p-1 border" placeholder="Product Name" type="text" />
                                         </div>
-                                        <div className="flex flex-col  p-2 w-80 mr-2 mb-3">
+                                        <div className="flex flex-col  p-2 w-[35%] mr-2 mb-3">
                                             <text className="mb-1 font-bold ">SKU: <InfoCircleOutlined /></text>
                                             <input className="pl-3 rounded-md p-1 border " placeholder="Product Name" type="text" />
                                         </div>
-                                        <div className="flex flex-col  p-2 w-80 mr-2 mb-3">
+                                        <div className="flex flex-col  p-2 w-[35%] mr-2 mb-3">
                                             <text className="mb-1 font-bold">Barcode Type *</text>
                                             <input className="pl-3 rounded-md p-1 border " placeholder="Code 128 (c128)" type="text" />
                                         </div>
@@ -91,15 +97,15 @@ const Addproduct = () => {
 
 
                                     <div className="flex flex-row ">
-                                        <div className="flex flex-col  p-2 w-80 mr-2 mb-3">
+                                        <div className="flex flex-col  p-2 w-[35%] mr-2 mb-3">
                                             <text className="mb-1 font-bold">Unit <PlusCircleOutlined className="text-blue-600" /></text>
                                             <input className="pl-3 rounded-md p-1 border " placeholder="please select" type="text" />
                                         </div>
-                                        <div className="flex flex-col  p-2 w-80 mr-2 mb-3">
+                                        <div className="flex flex-col  p-2 w-[35%] mr-2 mb-3">
                                             <text className="mb-1 font-bold">Brand <PlusCircleOutlined className="text-blue-600" /></text>
                                             <input className="pl-3 rounded-md p-1 border" placeholder="Please select" type="text" />
                                         </div>
-                                        <div className="flex flex-col  p-2 w-80 mr-2 mb-3">
+                                        <div className="flex flex-col  p-2 w-[35%] mr-2 mb-3">
                                             <text className="mb-1 font-bold">Category: </text>
                                             <input className="pl-3 rounded-md p-1 border" placeholder="Please Select" type="text" />
                                         </div>
@@ -107,15 +113,15 @@ const Addproduct = () => {
 
 
                                     <div className="flex flex-row ">
-                                        <div className="flex flex-col  p-2 w-80 mr-2 mb-3">
+                                        <div className="flex flex-col  p-2 w-[35%] mr-2 mb-3">
                                             <text className="mb-1 font-bold">Sub Category</text>
                                             <input className="pl-3 rounded-md p-1 border " placeholder="Please Select" type="text" />
                                         </div>
-                                        <div className="flex flex-col  p-2 w-80 mr-2 mb-3">
+                                        <div className="flex flex-col  p-2 w-[35%] mr-2 mb-3">
                                             <text className="mb-1 font-bold">Business Location: <InfoCircleOutlined /></text>
                                             <input className="pl-3 rounded-md p-1 border" placeholder="Product Name" type="text" />
                                         </div>
-                                        <div className="flex flex-col  p-2 w-80 mr-2 mb-3">
+                                        <div className="flex flex-col  p-2 w-[35%] mr-2 mb-3">
                                             <text className="mb-1 font-bold">Alert Quantity <InfoCircleOutlined /></text>
                                             <input className="pl-3 rounded-md p-1 border" placeholder="Alert Quantity" type="text" />
                                         </div>
@@ -152,7 +158,7 @@ const Addproduct = () => {
 
 
 
-                            <div className="flex flex-row shadow-sm mb-5">
+                            <div className="flex flex-row border-b-2 border-b-slate-100 mb-5">
 
                                 <div className="flex flex-col mb-5 ml-48">
 
@@ -167,15 +173,15 @@ const Addproduct = () => {
                                     </div>
 
                                     <div className="flex flex-row ">
-                                        <div className="flex flex-col  p-2 w-80 mr-2 mb-3">
+                                        <div className="flex flex-col  p-2 w-[35%] mr-2 mb-3">
                                             <text className="mb-1 font-bold"> Weight: </text>
                                             <input className="pl-3 rounded-md p-1 border" placeholder="Weight" type="text" />
                                         </div>
-                                        <div className="flex flex-col  p-2 w-80 mr-2 mb-3">
+                                        <div className="flex flex-col  p-2 w-[35%] mr-2 mb-3">
                                             <text className="mb-1 font-bold ">Custom Field1: </text>
                                             <input className="pl-3 rounded-md p-1 border " placeholder="Custom Field1" type="text" />
                                         </div>
-                                        <div className="flex flex-col  p-2 w-80 mr-2 mb-3">
+                                        <div className="flex flex-col  p-2 w-[35%] mr-2 mb-3">
                                             <text className="mb-1 font-bold">Custom Field2: </text>
                                             <input className="pl-3 rounded-md p-1 border " placeholder="Custom Field2" type="text" />
                                         </div>
@@ -183,11 +189,11 @@ const Addproduct = () => {
 
 
                                     <div className="flex flex-row ">
-                                        <div className="flex flex-col  p-2 w-80 mr-2 mb-3">
+                                        <div className="flex flex-col  p-2 w-[35%] mr-2 mb-3">
                                             <text className="mb-1 font-bold">Custom Field3: </text>
                                             <input className="pl-3 rounded-md p-1 border " placeholder="please select" type="text" />
                                         </div>
-                                        <div className="flex flex-col  p-2 w-80 mr-2 mb-3">
+                                        <div className="flex flex-col  p-2 w-[35%] mr-2 mb-3">
                                             <text className="mb-1 font-bold">Custom Field4: </text>
                                             <input className="pl-3 rounded-md p-1 border" placeholder="Custom Field4" type="text" />
                                         </div>
@@ -196,7 +202,7 @@ const Addproduct = () => {
 
                                     <div className="flex flex-row ">
 
-                                        <div className="flex flex-col  p-2 w-80 mr-2 mb-3">
+                                        <div className="flex flex-col  p-2 w-[35%] mr-2 mb-3">
                                             <text className="mb-1 font-bold"> Service staff time/Preparetion time (In minutes) </text>
                                             <input className="pl-3 rounded-md p-1 border " placeholder="please select" type="text" />
                                         </div>
